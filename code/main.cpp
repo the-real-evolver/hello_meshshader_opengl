@@ -19,10 +19,10 @@ const char* const MeshShader =
     "layout(triangles) out;\n"
     "out PerVertexData\n"
     "{\n"
-    "  vec4 color;\n"
+    "    vec4 color;\n"
     "} v_out[];\n"
-    "const vec3 vertices[3] = {vec3(-1,-1,0), vec3(0,1,0), vec3(1,-1,0)};\n"
-    "const vec3 colors[3] = {vec3(1.0,0.0,0.0), vec3(0.0,1.0,0.0), vec3(0.0,0.0,1.0)};\n"
+    "const vec3 vertices[3] = {vec3(-1.0, -1.0, 0.0), vec3(0.0, 1.0, 0.0), vec3(1.0, -1.0, 0.0)};\n"
+    "const vec3 colors[3] = {vec3(1.0, 0.0, 0.0), vec3(0.0, 1.0, 0.0), vec3(0.0, 0.0, 1.0)};\n"
     "void main()\n"
     "{\n"
     "    gl_MeshVerticesNV[0].gl_Position = vec4(vertices[0], 1.0);\n"
@@ -42,7 +42,7 @@ const char* const FragmentShader =
     "layout(location = 0) out vec4 FragColor;\n"
     "in PerVertexData\n"
     "{\n"
-    "  vec4 color;\n"
+    "    vec4 color;\n"
     "} fragIn;\n"
     "void main()\n"
     "{\n"
@@ -154,7 +154,7 @@ main()
     glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 4);
     glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 6);
     glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
-    GLFWwindow* window = glfwCreateWindow(800, 600, "Hello Meshshader", NULL, NULL);
+    GLFWwindow* window = glfwCreateWindow(960, 544, "Hello Meshshader", NULL, NULL);
     if (window == NULL)
     {
         printf("Failed to create GLFW window\n");
@@ -168,15 +168,15 @@ main()
         printf("Failed to initialize GLAD\n");
         return -1;
     }
-    glViewport(0, 0, 800, 600);
+    glViewport(0, 0, 960, 544);
 
     // create meshshader
     GLuint mesh_shader = create_shader_from_string(GL_MESH_SHADER_NV, MeshShader);
-    assert(0U != mesh_shader, "create_shader_from_string: Could not create mesh shader.\n");
+    assert(0U != mesh_shader);
     GLuint fragment_shader = create_shader_from_string(GL_FRAGMENT_SHADER, FragmentShader);
-    assert(0U != fragment_shader, "create_shader_from_string: Could not create fragment shader.\n");
+    assert(0U != fragment_shader);
     GLuint gpu_program = create_program(mesh_shader, fragment_shader);
-    assert(0U != gpu_program, "create_program: Could not create program.\n");
+    assert(0U != gpu_program);
 
     // renderloop
     while (!glfwWindowShouldClose(window))
