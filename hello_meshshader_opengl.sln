@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.7.34202.233
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "hello_meshshader_opengl", "hello_meshshader_opengl.vcxproj", "{0A720C62-48E7-40E0-B48D-7376E0A8BF45}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0A720C62-48E7-40E0-B48D-7376E0A8BF45}.Debug|x64.ActiveCfg = Debug|x64
+		{0A720C62-48E7-40E0-B48D-7376E0A8BF45}.Debug|x64.Build.0 = Debug|x64
+		{0A720C62-48E7-40E0-B48D-7376E0A8BF45}.Debug|x86.ActiveCfg = Debug|Win32
+		{0A720C62-48E7-40E0-B48D-7376E0A8BF45}.Debug|x86.Build.0 = Debug|Win32
+		{0A720C62-48E7-40E0-B48D-7376E0A8BF45}.Release|x64.ActiveCfg = Release|x64
+		{0A720C62-48E7-40E0-B48D-7376E0A8BF45}.Release|x64.Build.0 = Release|x64
+		{0A720C62-48E7-40E0-B48D-7376E0A8BF45}.Release|x86.ActiveCfg = Release|Win32
+		{0A720C62-48E7-40E0-B48D-7376E0A8BF45}.Release|x86.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {22591C16-82A6-4907-9049-CE304B328753}
+	EndGlobalSection
+EndGlobal

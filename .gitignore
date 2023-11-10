@@ -1,0 +1,4 @@
+# ignore Visual Studio temporary files, build results etc.
+.vs
+x64
+hello_meshshader_opengl.vcxproj.user
